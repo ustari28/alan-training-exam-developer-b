@@ -1,0 +1,21 @@
+<html>
+<body>
+    <script type="text/javascript">
+
+        function sendMessage() {
+            $.post("/channel",{
+                mensaje: $('#txtMessage').val(),
+                token: $('#token').val()
+            });   
+        }
+        
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <h1>Google Test Channel API</h1>
+    <form>
+        <input type="button" value="Send" onclick="sendMessage();">
+        <input type="text" id="txtMessage">
+        <input type="text" id="token">
+    </form>
+</body>
+</html>
